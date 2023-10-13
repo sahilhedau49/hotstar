@@ -8,20 +8,51 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    to bottom,
+    transparent,
+    rgb(var(--background-end-rgb))
+  );
+}
+
+.gradient-bg {
+  background: linear-gradient(45deg, #fcb1ff, rgb(114, 175, 255));
+}
+
+.text-gradient {
+  background: -webkit-linear-gradient(#f94eff, rgb(32, 129, 255));
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-bg {
+  background: linear-gradient(
+    45deg,
+    rgba(252, 177, 255, 0.3),
+    rgb(114, 175, 255, 0.3)
+  );
+  border: 1px solid #fff;
+  box-shadow: 0 0 20px #ababab;
+}
+
+.btn {
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid #222;
+  outline: none;
+}
+
+.btn:hover {
+  background: transparent;
+  transition: 0.5s;
+}
+
+.card-hover {
+  transition: 0.3s;
+}
+
+.card-hover:hover {
+  transform: scale(1.1);
 }
